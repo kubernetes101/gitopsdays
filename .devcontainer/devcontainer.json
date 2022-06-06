@@ -20,7 +20,7 @@
 
 	"containerEnv": {
 		"organization": "kubernetes101",
-		"repository": "kubecon2022",
+		"repository": "gitopsdays",
 		"deploymentPath": "/deploy"
 	},
 

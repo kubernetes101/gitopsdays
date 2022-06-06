@@ -186,7 +186,7 @@ git checkout -b $BRANCH
 git push --set-upstream origin $BRANCH
 
 # and let's also cd into the base directory of this repository
-cd /workspaces/kubecon2022
+cd /workspaces/gitopsdays
 
 ```
 
@@ -254,7 +254,7 @@ spec:
     branch: $BRANCH # the branch that we set in `flux bootstrap git` points Flux to a specific branch within the repository
   secretRef:
     name: flux-system # because we did not specify a --secret-name, the default secret name was set as `flux-system`
-  url: https://github.com/kubernetes101/kubecon2022 # the url that we set in `flux bootstrap git` points Flux to the specified repository
+  url: https://github.com/kubernetes101/gitopsdays # the url that we set in `flux bootstrap git` points Flux to the specified repository
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
