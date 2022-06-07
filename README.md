@@ -38,7 +38,10 @@ We use this Codespaces platform for `inner-loop` Kubernetes training and develop
   ```bash
 
   # check all the resources
-  kubectl get all -A
+  kubectl get all --all-namespaces
+
+  # check the pods in all namespaces
+  kubectl get pods -A
 
   ```
 
@@ -497,7 +500,7 @@ Grafana is an open source observability platform that allows you to visualize me
 
 - Grafana login info
   - admin
-  - kubecon101
+  - kubernetes101
 
 - Click on the `ports` tab of the terminal window
   - Click on the `open in browser icon` on the Grafana port (32000)
