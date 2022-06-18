@@ -83,7 +83,7 @@ spec:
             secretName: grafana-secrets
         - name: grafana-storage
           hostPath:
-            path: /grafana
+            path: /tmp/grafana
         - name: grafana-datasources
           configMap:
               defaultMode: 420
