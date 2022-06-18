@@ -44,6 +44,8 @@ spec:
       containers:
       - name: grafana
         image: ghcr.io/kubernetes101/grafana:8.1.1
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
         ports:
         - name: grafana
           containerPort: 3000
