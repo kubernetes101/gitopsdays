@@ -31,23 +31,23 @@ spec:
           ports:
             - containerPort: 9090
           volumeMounts:
-            - name: prometheus-config-volume
-              mountPath: /etc/prometheus/
+            # - name: prometheus-config-volume
+            #   mountPath: /etc/prometheus/
             - name: prometheus-storage-volumecd
               mountPath: /prometheus/
-      securityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
-        fsGroup: 2000
-        fsGroupChangePolicy: "OnRootMismatch"
+      # securityContext:
+      #   runAsUser: 1000
+      #   runAsGroup: 1000
+      #   fsGroup: 2000
+      #   fsGroupChangePolicy: "OnRootMismatch"
       volumes:
         - name: prometheus-config-volume
           configMap:
             defaultMode: 420
             name: prometheus-server-conf
-        - name: prometheus-storage-volume
-          hostPath:
-            path: /tmp/prometheus
+        # - name: prometheus-storage-volume
+        #   hostPath:
+        #     path: /tmp/prometheus
 
 ---
 
