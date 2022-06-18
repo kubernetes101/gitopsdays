@@ -302,3 +302,5 @@ dist
 ### OSX ###
 # General
 .DS_Store
+
+.env

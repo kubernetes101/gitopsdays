@@ -72,6 +72,11 @@ spec:
             mountPath: /var/lib/grafana/dashboards/imdb
           - name: dashboards-dotnet
             mountPath: /var/lib/grafana/dashboards/dotnet
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 3000
+        fsGroup: 2000
+        fsGroupChangePolicy: "OnRootMismatch"
       volumes:
         - name: grafana-secrets
           secret:
