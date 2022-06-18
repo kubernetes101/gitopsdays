@@ -31,10 +31,10 @@ spec:
           ports:
             - containerPort: 9090
           volumeMounts:
-            # - name: prometheus-config-volume
-            #   mountPath: /etc/prometheus/
-            - name: prometheus-storage-volumecd
-              mountPath: /prometheus/
+            - name: prometheus-config-volume
+              mountPath: /etc/prometheus/
+            # - name: prometheus-storage-volumecd
+            #   mountPath: /prometheus/
       # securityContext:
       #   runAsUser: 1000
       #   runAsGroup: 1000
