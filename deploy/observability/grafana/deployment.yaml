@@ -83,9 +83,9 @@ spec:
         - name: grafana-secrets
           secret:
             secretName: grafana-secrets
-        # - name: grafana-storage
-        #   hostPath:
-        #     path: /tmp/grafana
+        - name: grafana-storage
+          persistentVolumeClaim:
+            claimName: grafana-volume
         - name: grafana-datasources
           configMap:
               defaultMode: 420
@@ -121,3 +121,17 @@ spec:
     - port: 3000
       targetPort: 3000
       nodePort: 32000
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-volume
+spec:
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: hostpath
+  accessModes:
+    - ReadWriteOnce
