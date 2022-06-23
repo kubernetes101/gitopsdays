@@ -514,7 +514,7 @@ Grafana is an open source observability platform that allows you to visualize me
 
 ### Explore Grafana Dashboards
 
-- Click on the dashboard folder `General` at the top (with four squares) to access the dashboard search. The dashboard search can also be opened by using the shortcut `F`.
+- Click on the dashboard folder `General` at the top (with four squares) to access the dashboard search. The dashboard search can also be opened by using the shortcut lowercase `f` or press `Ctrl + f`.
 - The list will show all the dashboards configured in Grafana.
 - We configure two dashboards as part of the initial deployment:
   - IMDb App
