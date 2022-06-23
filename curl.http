@@ -1,3 +1,16 @@
+  kubectl delete service imdb -n imdb
+
+  kubectl get pods -n imdb
+
+  kubectl delete pod <pod name> -n imdb # notice what happens after a pod gets deleted
+
+  kubectl get pods -n imdb
+
+  kubectl delete -f 02-deploy.yaml # this is deleting using the resource definition , alteratively you can also run: kubectl delete deploy imdb -n imdb
+
+  kubectl get pods -n imdb # check that the imdb pods are gone
+
+  kubectl delete ns imdb # this will remove the namespace and all of its resources
 # IMDb readyz
 GET http://localhost:30080/readyz HTTP/1.1
 
