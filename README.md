@@ -140,11 +140,20 @@ To get started using Kubernetes, we will manually deploy our IMDb application. T
   http localhost:30080/healthz
   ```
 
-Open [curl.http](./curl.http)
+Open [curl.http](./curl.http) in Visual Studio Code
+
+Either click [curl.http](./curl.http) directly in Visual Studio Code
+
+Or via the terminal window
+
+  ```bash
+  # Open curl.http in Visual Studio Code via terminal window
+  code /workspaces/gitopsdays/curl.http
+  ```
 
 > [curl.http](./curl.http) is used in conjuction with the Visual Studio Code [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
 >
-> When you open [curl.http](./curl.http), you should see a clickable `Send Request` text above each of the URLs
+> When you open [curl.http](./curl.http) in Visual Studio Code, you should see a clickable `Send Request` text above each of the URLs
 
 ![REST Client example](./images/RESTClient.png)
 
